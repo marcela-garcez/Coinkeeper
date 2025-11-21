@@ -637,6 +637,7 @@
 2025-11-21T19:10:56.458-03:00  WARN 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2025-11-21T19:10:56.459-03:00  INFO 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-11-21T19:10:56.463-03:00  INFO 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+<<<<<<< HEAD
 2025-11-21T19:22:39.909-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Starting CoinkeeperApplication using Java 17.0.12 with PID 23260 (C:\ProjetoVScode\Coinkeeper_final-main\target\classes started by marce in C:\ProjetoVScode\Coinkeeper_final-main)
 2025-11-21T19:22:39.912-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : The following 1 profile is active: "test"
 2025-11-21T19:22:40.024-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
@@ -1940,3 +1941,5 @@
         centrocusto cc1_0 
     where
         cc1_0.id=?
+=======
+>>>>>>> f9903c01c951264344a3ed69b1c4b308b01b2637
