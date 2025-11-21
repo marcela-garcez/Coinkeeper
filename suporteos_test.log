@@ -1,0 +1,1942 @@
+2025-11-21T19:03:09.399-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Starting CoinkeeperApplication using Java 17.0.12 with PID 13812 (C:\ProjetoVScode\Coinkeeper_final-main\target\classes started by marce in C:\ProjetoVScode\Coinkeeper_final-main)
+2025-11-21T19:03:09.410-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : The following 1 profile is active: "test"
+2025-11-21T19:03:09.505-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21T19:03:09.505-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21T19:03:10.527-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T19:03:10.619-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 6 JPA repository interfaces.
+2025-11-21T19:03:12.008-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-21T19:03:12.030-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T19:03:12.031-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-11-21T19:03:12.107-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T19:03:12.108-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2602 ms
+2025-11-21T19:03:12.145-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T19:03:12.466-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:coinkeeper user=SA
+2025-11-21T19:03:12.469-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T19:03:12.484-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:coinkeeper'
+2025-11-21T19:03:12.694-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21T19:03:12.811-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-11-21T19:03:12.870-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-21T19:03:13.049-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@257e5d2d
+2025-11-21T19:03:13.049-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@257e5d2d
+2025-11-21T19:03:13.050-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@257e5d2d
+2025-11-21T19:03:13.050-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@20a7996a
+2025-11-21T19:03:13.050-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@20a7996a
+2025-11-21T19:03:13.050-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@47d4b7c9
+2025-11-21T19:03:13.050-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@47d4b7c9
+2025-11-21T19:03:13.051-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@7040aec1
+2025-11-21T19:03:13.051-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@7040aec1
+2025-11-21T19:03:13.051-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@278002d1
+2025-11-21T19:03:13.051-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@278002d1
+2025-11-21T19:03:13.051-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@278002d1
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@3b70a382
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@3b70a382
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@3b70a382
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@b0aa34e
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@b0aa34e
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@35587d1e
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@2d367c9e
+2025-11-21T19:03:13.052-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@2d367c9e
+2025-11-21T19:03:13.053-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@5ca8ac10
+2025-11-21T19:03:13.053-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@2e66418
+2025-11-21T19:03:13.053-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@74a059d7
+2025-11-21T19:03:13.053-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@74a059d7
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@74a059d7
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@6a6c1951
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@6a6c1951
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@6a6c1951
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@73bde020
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@73bde020
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@73bde020
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@424a9ceb
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@424a9ceb
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@424a9ceb
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@34d20b94
+2025-11-21T19:03:13.054-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@34d20b94
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@34d20b94
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@3efe3ace
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@3efe3ace
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@225e71d1
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@225e71d1
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@34650cb5
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@34650cb5
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@34650cb5
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@104f2f06
+2025-11-21T19:03:13.055-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@5f285f8b
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@5f285f8b
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@ea96d46
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@12b5d882
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@12b5d882
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@12b5d882
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@7b6be2cd
+2025-11-21T19:03:13.056-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@66223e2c
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@2324bcf3
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@1f6901dd
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@1f6901dd
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@3b30f577
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@3b30f577
+2025-11-21T19:03:13.057-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@4c147f63
+2025-11-21T19:03:13.058-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@4ad18136
+2025-11-21T19:03:13.058-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@1de11658
+2025-11-21T19:03:13.058-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@21c6d3de
+2025-11-21T19:03:13.058-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@4e465fe2
+2025-11-21T19:03:13.058-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@8d8bf2d
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@1d1e3bb8
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@1d1e3bb8
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@a5153e6
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@a5153e6
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@7694b401
+2025-11-21T19:03:13.059-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@7694b401
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@3b785c29
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@3b785c29
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@57d76305
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@57d76305
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5719c47a
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@47e4624
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@7d1ecb96
+2025-11-21T19:03:13.060-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@7d1ecb96
+2025-11-21T19:03:13.061-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@113d507b
+2025-11-21T19:03:13.061-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@89e7c32
+2025-11-21T19:03:13.062-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7e274463
+2025-11-21T19:03:13.062-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@756e724a
+2025-11-21T19:03:13.062-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@756e724a
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@e2b4a14
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@752fc80f
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@316f8e95
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@316f8e95
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@379546d0
+2025-11-21T19:03:13.063-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@379546d0
+2025-11-21T19:03:13.064-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@633ac1dc
+2025-11-21T19:03:13.064-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@633ac1dc
+2025-11-21T19:03:13.064-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@633ac1dc
+2025-11-21T19:03:13.064-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@68de1204
+2025-11-21T19:03:13.064-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@68de1204
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@68de1204
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@250832ac
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@38b6531b
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@d3741f0
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@d3741f0
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@15612c60
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@15612c60
+2025-11-21T19:03:13.065-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@15612c60
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@7198f132
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@7b3c4a91
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@4c33bcc7
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@4c33bcc7
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@50ad9b0d
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@50ad9b0d
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@50ad9b0d
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@668af14b
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@668af14b
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@7f7b47c9
+2025-11-21T19:03:13.066-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@7f7b47c9
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@2e7f1965
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@2e7f1965
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@12b68a54
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@12b68a54
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@230721e0
+2025-11-21T19:03:13.067-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@230721e0
+2025-11-21T19:03:13.068-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@6e77f46
+2025-11-21T19:03:13.068-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@5005face
+2025-11-21T19:03:13.077-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@6ececc73
+2025-11-21T19:03:13.077-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@6ececc73
+2025-11-21T19:03:13.079-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@396fedd
+2025-11-21T19:03:13.080-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@48d30a63
+2025-11-21T19:03:13.080-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@20cf0872
+2025-11-21T19:03:13.080-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@4282736b
+2025-11-21T19:03:13.080-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@76561df0
+2025-11-21T19:03:13.081-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@2606814b
+2025-11-21T19:03:13.081-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@7e528161
+2025-11-21T19:03:13.081-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@2f9abceb
+2025-11-21T19:03:13.081-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@69e58d75
+2025-11-21T19:03:13.428-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T19:03:13.569-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-11-21T19:03:13.569-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-11-21T19:03:13.569-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-11-21T19:03:13.573-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:03:13.573-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:03:13.575-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-11-21T19:03:13.581-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:03:13.582-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:03:13.582-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:03:13.586-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3aa19df4] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@34f32cf7]
+2025-11-21T19:03:14.965-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21T19:03:14.966-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3aa19df4] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@60c08fb3]
+2025-11-21T19:03:14.985-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade 
+2025-11-21T19:03:14.990-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists centrocusto cascade 
+2025-11-21T19:03:14.990-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta cascade 
+2025-11-21T19:03:14.991-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade 
+2025-11-21T19:03:14.991-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2025-11-21T19:03:14.991-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade 
+2025-11-21T19:03:14.991-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade 
+2025-11-21T19:03:14.992-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-11-21T19:03:14.992-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_centrocusto
+2025-11-21T19:03:14.992-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_conta
+2025-11-21T19:03:14.992-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-11-21T19:03:14.992-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-11-21T19:03:14.993-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-11-21T19:03:14.998-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-11-21T19:03:15.002-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_centrocusto start with 1 increment by 50
+2025-11-21T19:03:15.004-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_conta start with 1 increment by 50
+2025-11-21T19:03:15.004-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-11-21T19:03:15.005-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 50
+2025-11-21T19:03:15.006-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_usuario start with 1 increment by 50
+2025-11-21T19:03:15.010-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.015-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table centrocusto (
+        id bigint not null,
+        descricao varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.016-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table conta (
+        limite numeric(11,2) not null,
+        saldo numeric(11,2) not null,
+        id bigint not null,
+        idbanco bigint,
+        idusuario bigint,
+        descricao varchar(255) not null,
+        tipo_conta enum ('CARTAO_ALIMENTACAO','CARTAO_CREDITO','CONTA_CORRENTE','CONTA_INVESTIMENTO','POUPANCA') not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.017-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        valor_baixado numeric(8,2) not null,
+        valor_documento numeric(8,2) not null,
+        id bigint not null,
+        idcentrocusto bigint,
+        idconta bigint not null,
+        idpessoa bigint not null,
+        descricao varchar(255) not null,
+        parcela varchar(255) not null,
+        situacao enum ('ABERTO','BAIXADO') not null,
+        tipo_lancamento enum ('CREDITO','DEBITO') not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.018-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        person_type integer,
+        person_id bigint not null
+    )
+2025-11-21T19:03:15.019-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.020-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        email varchar(255) not null,
+        nome varchar(255) not null,
+        senha varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:03:15.021-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FKdmja1sxk4w1u69hd31dng20c9 
+       foreign key (idbanco) 
+       references banco
+2025-11-21T19:03:15.034-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FK8kys5475y4bgqtokkdn43eafo 
+       foreign key (idusuario) 
+       references usuario
+2025-11-21T19:03:15.036-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKovoh2vpnfl1d81k91vfpf8oji 
+       foreign key (idcentrocusto) 
+       references centrocusto
+2025-11-21T19:03:15.038-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK80f9s83jtvf4tclokbnav8tv8 
+       foreign key (idconta) 
+       references conta
+2025-11-21T19:03:15.040-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-11-21T19:03:15.041-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKigo2r6n6hqxx1253jhns4ntcv 
+       foreign key (person_id) 
+       references usuario
+2025-11-21T19:03:15.046-03:00 TRACE 13812 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@60c08fb3] for TypeConfiguration
+2025-11-21T19:03:15.047-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T19:03:15.828-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:03:15.937-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.949-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:03:15.952-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.954-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.956-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:03:15.958-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.960-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:03:15.961-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.964-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.966-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:03:15.967-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.969-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:03:15.970-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.972-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.974-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:03:15.990-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:03:15.995-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:03:15.997-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:03:16.001-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:03:16.003-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:03:16.005-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:03:16.006-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:03:16.009-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:03:16.014-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:03:16.016-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:03:16.018-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:03:16.021-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:03:16.023-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:03:16.029-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:03:16.031-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:03:16.036-03:00 DEBUG 13812 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:03:16.107-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-11-21T19:03:16.289-03:00  WARN 13812 --- [Coinkeeper] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T19:03:17.122-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-21T19:03:17.167-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-21T19:03:17.181-03:00  INFO 13812 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Started CoinkeeperApplication in 8.385 seconds (process running for 9.15)
+2025-11-21T19:06:41.855-03:00  INFO 13812 --- [Coinkeeper] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21T19:06:41.857-03:00  INFO 13812 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-21T19:06:41.860-03:00  INFO 13812 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-21T19:06:42.524-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        u1_0.senha 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-11-21T19:06:42.543-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2025-11-21T19:06:43.095-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        l1_0.id,
+        l1_0.idcentrocusto,
+        l1_0.idconta,
+        l1_0.data_baixa,
+        l1_0.data_lancamento,
+        l1_0.data_vencimento,
+        l1_0.descricao,
+        l1_0.parcela,
+        l1_0.idpessoa,
+        l1_0.situacao,
+        l1_0.tipo_lancamento,
+        l1_0.valor_baixado,
+        l1_0.valor_documento 
+    from
+        lancamento l1_0
+2025-11-21T19:06:43.109-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:06:43.113-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:06:43.119-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:06:43.123-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:06:43.124-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:06:43.127-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:06:43.128-03:00 DEBUG 13812 --- [Coinkeeper] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:10:56.425-03:00  INFO 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T19:10:56.428-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists banco cascade 
+2025-11-21T19:10:56.432-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists centrocusto cascade 
+2025-11-21T19:10:56.434-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists conta cascade 
+2025-11-21T19:10:56.436-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade 
+2025-11-21T19:10:56.438-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2025-11-21T19:10:56.440-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade 
+2025-11-21T19:10:56.441-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade 
+2025-11-21T19:10:56.441-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-11-21T19:10:56.442-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_centrocusto
+2025-11-21T19:10:56.443-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_conta
+2025-11-21T19:10:56.444-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-11-21T19:10:56.445-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-11-21T19:10:56.445-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-11-21T19:10:56.447-03:00 TRACE 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@60c08fb3] for TypeConfiguration
+2025-11-21T19:10:56.447-03:00 DEBUG 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@22c6dadb] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@60c08fb3]
+2025-11-21T19:10:56.458-03:00  WARN 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-11-21T19:10:56.459-03:00  INFO 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-21T19:10:56.463-03:00  INFO 13812 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-21T19:22:39.909-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Starting CoinkeeperApplication using Java 17.0.12 with PID 23260 (C:\ProjetoVScode\Coinkeeper_final-main\target\classes started by marce in C:\ProjetoVScode\Coinkeeper_final-main)
+2025-11-21T19:22:39.912-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : The following 1 profile is active: "test"
+2025-11-21T19:22:40.024-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21T19:22:40.025-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21T19:22:41.833-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T19:22:42.078-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217 ms. Found 6 JPA repository interfaces.
+2025-11-21T19:22:44.640-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-21T19:22:44.677-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T19:22:44.678-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-11-21T19:22:44.838-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T19:22:44.839-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4812 ms
+2025-11-21T19:22:44.916-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T19:22:45.461-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:coinkeeper user=SA
+2025-11-21T19:22:45.466-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T19:22:45.492-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:coinkeeper'
+2025-11-21T19:22:45.899-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21T19:22:46.085-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-11-21T19:22:46.190-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-21T19:22:46.407-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7ec0f606
+2025-11-21T19:22:46.408-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7ec0f606
+2025-11-21T19:22:46.408-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@7ec0f606
+2025-11-21T19:22:46.408-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@67915485
+2025-11-21T19:22:46.409-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@67915485
+2025-11-21T19:22:46.409-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@1b556d06
+2025-11-21T19:22:46.409-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@1b556d06
+2025-11-21T19:22:46.409-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@445d2422
+2025-11-21T19:22:46.410-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@445d2422
+2025-11-21T19:22:46.410-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@3dd49a69
+2025-11-21T19:22:46.410-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@3dd49a69
+2025-11-21T19:22:46.411-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@3dd49a69
+2025-11-21T19:22:46.411-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@500cc42a
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@500cc42a
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@500cc42a
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@544e2667
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@544e2667
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@62559550
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@f4a4544
+2025-11-21T19:22:46.413-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@f4a4544
+2025-11-21T19:22:46.414-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@45039d91
+2025-11-21T19:22:46.414-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@605bf648
+2025-11-21T19:22:46.414-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2e6a1006
+2025-11-21T19:22:46.414-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2e6a1006
+2025-11-21T19:22:46.414-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@2e6a1006
+2025-11-21T19:22:46.416-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@73d700ea
+2025-11-21T19:22:46.416-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@73d700ea
+2025-11-21T19:22:46.416-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@73d700ea
+2025-11-21T19:22:46.417-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@2a61f414
+2025-11-21T19:22:46.417-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@2a61f414
+2025-11-21T19:22:46.418-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@2a61f414
+2025-11-21T19:22:46.418-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@1537aea6
+2025-11-21T19:22:46.419-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@1537aea6
+2025-11-21T19:22:46.419-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@1537aea6
+2025-11-21T19:22:46.420-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@6b237626
+2025-11-21T19:22:46.420-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@6b237626
+2025-11-21T19:22:46.421-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@6b237626
+2025-11-21T19:22:46.421-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@2038fbf8
+2025-11-21T19:22:46.421-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@2038fbf8
+2025-11-21T19:22:46.422-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@5dc7abf
+2025-11-21T19:22:46.422-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@5dc7abf
+2025-11-21T19:22:46.422-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@2db6b63c
+2025-11-21T19:22:46.422-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@2db6b63c
+2025-11-21T19:22:46.423-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@2db6b63c
+2025-11-21T19:22:46.423-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@5d5477ea
+2025-11-21T19:22:46.423-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@3ad4b083
+2025-11-21T19:22:46.423-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@3ad4b083
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@5cbb2ce4
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@44a46619
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@44a46619
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@44a46619
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@3a31b240
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@257e5d2d
+2025-11-21T19:22:46.424-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@20a7996a
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@47d4b7c9
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@47d4b7c9
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@7040aec1
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@7040aec1
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@278002d1
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@3b70a382
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@59f821da
+2025-11-21T19:22:46.425-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@2cbbba82
+2025-11-21T19:22:46.427-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@b0aa34e
+2025-11-21T19:22:46.428-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@35587d1e
+2025-11-21T19:22:46.430-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@2d367c9e
+2025-11-21T19:22:46.430-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@2d367c9e
+2025-11-21T19:22:46.430-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5ca8ac10
+2025-11-21T19:22:46.430-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5ca8ac10
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@2e66418
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@2e66418
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@74a059d7
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@74a059d7
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@6a6c1951
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@6a6c1951
+2025-11-21T19:22:46.431-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@73bde020
+2025-11-21T19:22:46.432-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@424a9ceb
+2025-11-21T19:22:46.432-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@34d20b94
+2025-11-21T19:22:46.432-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@34d20b94
+2025-11-21T19:22:46.432-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@3efe3ace
+2025-11-21T19:22:46.433-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@225e71d1
+2025-11-21T19:22:46.433-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@34650cb5
+2025-11-21T19:22:46.433-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@104f2f06
+2025-11-21T19:22:46.433-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@104f2f06
+2025-11-21T19:22:46.434-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@5f285f8b
+2025-11-21T19:22:46.434-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@ea96d46
+2025-11-21T19:22:46.434-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@12b5d882
+2025-11-21T19:22:46.434-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@12b5d882
+2025-11-21T19:22:46.434-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@7b6be2cd
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@7b6be2cd
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@66223e2c
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@66223e2c
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@66223e2c
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@2324bcf3
+2025-11-21T19:22:46.435-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@2324bcf3
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@2324bcf3
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@1f6901dd
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@3b30f577
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@4c147f63
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@4c147f63
+2025-11-21T19:22:46.436-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@4ad18136
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@4ad18136
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@4ad18136
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@1de11658
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@21c6d3de
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@4e465fe2
+2025-11-21T19:22:46.437-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@4e465fe2
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@8d8bf2d
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@8d8bf2d
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@8d8bf2d
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@1d1e3bb8
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@1d1e3bb8
+2025-11-21T19:22:46.438-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@a5153e6
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@a5153e6
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@7694b401
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@7694b401
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@3b785c29
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@3b785c29
+2025-11-21T19:22:46.439-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@57d76305
+2025-11-21T19:22:46.440-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@57d76305
+2025-11-21T19:22:46.440-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@5719c47a
+2025-11-21T19:22:46.440-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@47e4624
+2025-11-21T19:22:46.455-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@c2bc0b
+2025-11-21T19:22:46.456-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@c2bc0b
+2025-11-21T19:22:46.459-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@2ff82cee
+2025-11-21T19:22:46.460-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@5f392f27
+2025-11-21T19:22:46.461-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@5e5261e5
+2025-11-21T19:22:46.461-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@44865c2b
+2025-11-21T19:22:46.461-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@2a779709
+2025-11-21T19:22:46.461-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@3c21c577
+2025-11-21T19:22:46.461-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@71b1d65f
+2025-11-21T19:22:46.462-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@7a0ab46
+2025-11-21T19:22:46.462-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@11f9ab64
+2025-11-21T19:22:47.066-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T19:22:47.308-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-11-21T19:22:47.308-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-11-21T19:22:47.309-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-11-21T19:22:47.314-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:22:47.316-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:22:47.318-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-11-21T19:22:47.334-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:22:47.334-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:22:47.334-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:22:47.344-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@411a7e6b] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@58fb9e31]
+2025-11-21T19:22:50.282-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21T19:22:50.283-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@411a7e6b] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@5bfacf3a]
+2025-11-21T19:22:50.317-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade 
+2025-11-21T19:22:50.328-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists centrocusto cascade 
+2025-11-21T19:22:50.328-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta cascade 
+2025-11-21T19:22:50.330-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade 
+2025-11-21T19:22:50.330-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2025-11-21T19:22:50.331-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade 
+2025-11-21T19:22:50.332-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade 
+2025-11-21T19:22:50.333-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-11-21T19:22:50.334-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_centrocusto
+2025-11-21T19:22:50.334-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_conta
+2025-11-21T19:22:50.335-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-11-21T19:22:50.335-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-11-21T19:22:50.336-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-11-21T19:22:50.347-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-11-21T19:22:50.352-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_centrocusto start with 1 increment by 50
+2025-11-21T19:22:50.353-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_conta start with 1 increment by 50
+2025-11-21T19:22:50.354-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-11-21T19:22:50.355-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 50
+2025-11-21T19:22:50.357-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_usuario start with 1 increment by 50
+2025-11-21T19:22:50.364-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.376-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table centrocusto (
+        id bigint not null,
+        descricao varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.378-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table conta (
+        limite numeric(11,2) not null,
+        saldo numeric(11,2) not null,
+        id bigint not null,
+        idbanco bigint,
+        idusuario bigint,
+        descricao varchar(255) not null,
+        tipo_conta enum ('CARTAO_ALIMENTACAO','CARTAO_CREDITO','CONTA_CORRENTE','CONTA_INVESTIMENTO','POUPANCA') not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.382-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        valor_baixado numeric(8,2) not null,
+        valor_documento numeric(8,2) not null,
+        id bigint not null,
+        idcentrocusto bigint,
+        idconta bigint not null,
+        idpessoa bigint not null,
+        descricao varchar(255) not null,
+        parcela varchar(255) not null,
+        situacao enum ('ABERTO','BAIXADO') not null,
+        tipo_lancamento enum ('CREDITO','DEBITO') not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.384-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        person_type integer,
+        person_id bigint not null
+    )
+2025-11-21T19:22:50.385-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.386-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        email varchar(255) not null,
+        nome varchar(255) not null,
+        senha varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:22:50.388-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FKdmja1sxk4w1u69hd31dng20c9 
+       foreign key (idbanco) 
+       references banco
+2025-11-21T19:22:50.415-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FK8kys5475y4bgqtokkdn43eafo 
+       foreign key (idusuario) 
+       references usuario
+2025-11-21T19:22:50.418-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKovoh2vpnfl1d81k91vfpf8oji 
+       foreign key (idcentrocusto) 
+       references centrocusto
+2025-11-21T19:22:50.423-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK80f9s83jtvf4tclokbnav8tv8 
+       foreign key (idconta) 
+       references conta
+2025-11-21T19:22:50.427-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-11-21T19:22:50.432-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKigo2r6n6hqxx1253jhns4ntcv 
+       foreign key (person_id) 
+       references usuario
+2025-11-21T19:22:50.442-03:00 TRACE 23260 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@5bfacf3a] for TypeConfiguration
+2025-11-21T19:22:50.443-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T19:22:51.797-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:22:51.930-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.944-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:22:51.947-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.950-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.954-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:22:51.957-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.960-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:22:51.962-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.965-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.969-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:22:51.972-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.977-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:22:51.979-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.990-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:22:51.999-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:22:52.037-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:22:52.050-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:22:52.052-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:22:52.058-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:22:52.060-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:22:52.062-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:22:52.063-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:22:52.068-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:22:52.073-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:22:52.078-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:22:52.080-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:22:52.083-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:22:52.085-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:22:52.091-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:22:52.096-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:22:52.107-03:00 DEBUG 23260 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:22:52.258-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-11-21T19:22:53.055-03:00  WARN 23260 --- [Coinkeeper] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T19:22:55.124-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-21T19:22:55.219-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-21T19:22:55.251-03:00  INFO 23260 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Started CoinkeeperApplication in 15.974 seconds (process running for 16.729)
+2025-11-21T19:25:00.260-03:00  INFO 23260 --- [Coinkeeper] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21T19:25:00.262-03:00  INFO 23260 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-21T19:25:00.265-03:00  INFO 23260 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-11-21T19:25:00.957-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        u1_0.senha 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-11-21T19:25:00.979-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2025-11-21T19:25:01.450-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        l1_0.id,
+        l1_0.idcentrocusto,
+        l1_0.idconta,
+        l1_0.data_baixa,
+        l1_0.data_lancamento,
+        l1_0.data_vencimento,
+        l1_0.descricao,
+        l1_0.parcela,
+        l1_0.idpessoa,
+        l1_0.situacao,
+        l1_0.tipo_lancamento,
+        l1_0.valor_baixado,
+        l1_0.valor_documento 
+    from
+        lancamento l1_0
+2025-11-21T19:25:01.450-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.idbanco,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        c1_0.idusuario 
+    from
+        conta c1_0
+2025-11-21T19:25:01.464-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:25:01.464-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.razao_social 
+    from
+        banco b1_0 
+    where
+        b1_0.id=?
+2025-11-21T19:25:01.468-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        usuario u1_0 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        u1_0.id=?
+2025-11-21T19:25:01.468-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:25:01.473-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:25:01.473-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.razao_social 
+    from
+        banco b1_0 
+    where
+        b1_0.id=?
+2025-11-21T19:25:01.476-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        usuario u1_0 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        u1_0.id=?
+2025-11-21T19:25:01.477-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:25:01.479-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:25:01.481-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:25:01.483-03:00 DEBUG 23260 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:26:54.108-03:00  INFO 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T19:26:54.109-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists banco cascade 
+2025-11-21T19:26:54.112-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists centrocusto cascade 
+2025-11-21T19:26:54.114-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists conta cascade 
+2025-11-21T19:26:54.115-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade 
+2025-11-21T19:26:54.116-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2025-11-21T19:26:54.116-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade 
+2025-11-21T19:26:54.117-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade 
+2025-11-21T19:26:54.117-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-11-21T19:26:54.118-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_centrocusto
+2025-11-21T19:26:54.118-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_conta
+2025-11-21T19:26:54.119-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-11-21T19:26:54.119-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-11-21T19:26:54.120-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-11-21T19:26:54.121-03:00 TRACE 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@5bfacf3a] for TypeConfiguration
+2025-11-21T19:26:54.121-03:00 DEBUG 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7c7ddc02] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5bfacf3a]
+2025-11-21T19:26:54.201-03:00  WARN 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-11-21T19:26:54.202-03:00  INFO 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-21T19:26:54.204-03:00  INFO 23260 --- [Coinkeeper] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-21T19:30:00.316-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Starting CoinkeeperApplication using Java 17.0.12 with PID 21044 (C:\ProjetoVScode\Coinkeeper_final-main\target\classes started by marce in C:\ProjetoVScode\Coinkeeper_final-main)
+2025-11-21T19:30:00.319-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : The following 1 profile is active: "test"
+2025-11-21T19:30:00.422-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21T19:30:00.423-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21T19:30:01.525-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T19:30:01.636-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
+2025-11-21T19:30:03.661-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-21T19:30:03.700-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T19:30:03.701-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-11-21T19:30:03.852-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T19:30:03.853-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3430 ms
+2025-11-21T19:30:03.927-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T19:30:04.538-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:coinkeeper user=SA
+2025-11-21T19:30:04.543-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T19:30:04.570-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:coinkeeper'
+2025-11-21T19:30:04.964-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-21T19:30:05.196-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-11-21T19:30:05.304-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-21T19:30:05.508-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@546eee38
+2025-11-21T19:30:05.508-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@546eee38
+2025-11-21T19:30:05.508-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@546eee38
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@1033fa7
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@1033fa7
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@2530655e
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@2530655e
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@3a364a72
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@3a364a72
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@198a7c22
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@198a7c22
+2025-11-21T19:30:05.509-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@198a7c22
+2025-11-21T19:30:05.510-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@1ec96b3
+2025-11-21T19:30:05.510-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@1ec96b3
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@1ec96b3
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@659cb0be
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@659cb0be
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@a0ebb0
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@271dc0d0
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@271dc0d0
+2025-11-21T19:30:05.511-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@6572e33e
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@65eba66e
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@62113c08
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@62113c08
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@62113c08
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@2b436bda
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@2b436bda
+2025-11-21T19:30:05.512-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@2b436bda
+2025-11-21T19:30:05.517-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@595a169f
+2025-11-21T19:30:05.518-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@595a169f
+2025-11-21T19:30:05.518-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@595a169f
+2025-11-21T19:30:05.519-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@61ba130c
+2025-11-21T19:30:05.519-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@61ba130c
+2025-11-21T19:30:05.519-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@61ba130c
+2025-11-21T19:30:05.520-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@aa0924f
+2025-11-21T19:30:05.520-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@aa0924f
+2025-11-21T19:30:05.521-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@aa0924f
+2025-11-21T19:30:05.521-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@3a8d257a
+2025-11-21T19:30:05.521-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@3a8d257a
+2025-11-21T19:30:05.521-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@33ea325a
+2025-11-21T19:30:05.521-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@33ea325a
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@2796558
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@2796558
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@2796558
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@cc5adb2
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@5fb0ffa5
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@5fb0ffa5
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@3daa7eeb
+2025-11-21T19:30:05.522-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@74b09fa3
+2025-11-21T19:30:05.523-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@74b09fa3
+2025-11-21T19:30:05.523-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@74b09fa3
+2025-11-21T19:30:05.523-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@553914ba
+2025-11-21T19:30:05.523-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@d2c946f
+2025-11-21T19:30:05.523-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@639ffe07
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@13a23850
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@13a23850
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@e23625a
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@e23625a
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@6745001d
+2025-11-21T19:30:05.524-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@7bb6b534
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@79d462aa
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@6cf0ee78
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@237a4e13
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@6dab505d
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@37b0ae70
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@37b0ae70
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5cd815d0
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5cd815d0
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@2da3c28e
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@2da3c28e
+2025-11-21T19:30:05.525-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@1abd56df
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@1abd56df
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@284cb8d6
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@284cb8d6
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@34a65e9a
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7224d32
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@77d9f8a7
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@77d9f8a7
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@3a1e7482
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@3ccaafd5
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@29142ea3
+2025-11-21T19:30:05.526-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@11b0f7e6
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@11b0f7e6
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@58c33b36
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@319e83fc
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@3977c25a
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@3977c25a
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@2f6e0d55
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@2f6e0d55
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@6e359905
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@6e359905
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@6e359905
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@2bf1765c
+2025-11-21T19:30:05.527-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@2bf1765c
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@2bf1765c
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@2c13046a
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@7348b018
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@3177e2c5
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@3177e2c5
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@11943121
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@11943121
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@11943121
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@2590472d
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@13eeebf7
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@1d014285
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@1d014285
+2025-11-21T19:30:05.528-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@2d2c753d
+2025-11-21T19:30:05.529-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@2d2c753d
+2025-11-21T19:30:05.529-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@2d2c753d
+2025-11-21T19:30:05.529-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@aa2e69a
+2025-11-21T19:30:05.529-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@aa2e69a
+2025-11-21T19:30:05.529-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@6e77156a
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@6e77156a
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@79f5774b
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@79f5774b
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@37be60d5
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@37be60d5
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@2ab5d68e
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@2ab5d68e
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@7c3f4af7
+2025-11-21T19:30:05.530-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@2ea22514
+2025-11-21T19:30:05.545-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@544610f6
+2025-11-21T19:30:05.545-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@544610f6
+2025-11-21T19:30:05.548-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@5d0f1a32
+2025-11-21T19:30:05.549-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@2491bc0f
+2025-11-21T19:30:05.549-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@73b0e878
+2025-11-21T19:30:05.549-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@5dbc9aa9
+2025-11-21T19:30:05.550-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@7847c5a6
+2025-11-21T19:30:05.550-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@519f7f65
+2025-11-21T19:30:05.550-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@2518be06
+2025-11-21T19:30:05.550-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@1cc811de
+2025-11-21T19:30:05.550-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@5ae48d14
+2025-11-21T19:30:06.066-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T19:30:06.245-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-11-21T19:30:06.245-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-11-21T19:30:06.246-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-11-21T19:30:06.250-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:30:06.251-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-11-21T19:30:06.255-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-11-21T19:30:06.264-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:30:06.265-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:30:06.265-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-11-21T19:30:06.270-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@a9492f6] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@295d6c29]
+2025-11-21T19:30:07.909-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-21T19:30:07.910-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@a9492f6] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@47cdd26]
+2025-11-21T19:30:07.940-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade 
+2025-11-21T19:30:07.945-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists centrocusto cascade 
+2025-11-21T19:30:07.945-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta cascade 
+2025-11-21T19:30:07.945-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade 
+2025-11-21T19:30:07.946-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2025-11-21T19:30:07.946-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade 
+2025-11-21T19:30:07.946-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade 
+2025-11-21T19:30:07.946-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-11-21T19:30:07.947-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_centrocusto
+2025-11-21T19:30:07.947-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_conta
+2025-11-21T19:30:07.947-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-11-21T19:30:07.947-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-11-21T19:30:07.947-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-11-21T19:30:07.954-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-11-21T19:30:07.957-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_centrocusto start with 1 increment by 50
+2025-11-21T19:30:07.958-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_conta start with 1 increment by 50
+2025-11-21T19:30:07.959-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-11-21T19:30:07.959-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 50
+2025-11-21T19:30:07.959-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_usuario start with 1 increment by 50
+2025-11-21T19:30:07.964-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.972-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table centrocusto (
+        id bigint not null,
+        descricao varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.973-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table conta (
+        limite numeric(11,2) not null,
+        saldo numeric(11,2) not null,
+        id bigint not null,
+        idbanco bigint,
+        idusuario bigint,
+        descricao varchar(255) not null,
+        tipo_conta enum ('CARTAO_ALIMENTACAO','CARTAO_CREDITO','CONTA_CORRENTE','CONTA_INVESTIMENTO','POUPANCA') not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.975-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        valor_baixado numeric(8,2) not null,
+        valor_documento numeric(8,2) not null,
+        id bigint not null,
+        idcentrocusto bigint,
+        idconta bigint not null,
+        idpessoa bigint not null,
+        descricao varchar(255) not null,
+        parcela varchar(255) not null,
+        situacao enum ('ABERTO','BAIXADO') not null,
+        tipo_lancamento enum ('CREDITO','DEBITO') not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.976-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        person_type integer,
+        person_id bigint not null
+    )
+2025-11-21T19:30:07.977-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        id bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.978-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        email varchar(255) not null,
+        nome varchar(255) not null,
+        senha varchar(255) not null,
+        primary key (id)
+    )
+2025-11-21T19:30:07.979-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FKdmja1sxk4w1u69hd31dng20c9 
+       foreign key (idbanco) 
+       references banco
+2025-11-21T19:30:07.997-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta 
+       add constraint FK8kys5475y4bgqtokkdn43eafo 
+       foreign key (idusuario) 
+       references usuario
+2025-11-21T19:30:07.999-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKovoh2vpnfl1d81k91vfpf8oji 
+       foreign key (idcentrocusto) 
+       references centrocusto
+2025-11-21T19:30:08.000-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK80f9s83jtvf4tclokbnav8tv8 
+       foreign key (idconta) 
+       references conta
+2025-11-21T19:30:08.002-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-11-21T19:30:08.003-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKigo2r6n6hqxx1253jhns4ntcv 
+       foreign key (person_id) 
+       references usuario
+2025-11-21T19:30:08.009-03:00 TRACE 21044 --- [Coinkeeper] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@47cdd26] for TypeConfiguration
+2025-11-21T19:30:08.010-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T19:30:09.945-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:30:10.076-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.095-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_banco
+2025-11-21T19:30:10.097-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.101-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.104-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:30:10.106-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.108-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_centrocusto
+2025-11-21T19:30:10.110-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.113-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        centrocusto
+        (descricao, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.117-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:30:10.122-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.125-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_pessoa
+2025-11-21T19:30:10.128-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.131-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (razao_social, id) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.134-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:30:10.153-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:30:10.161-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.163-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.170-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_usuario
+2025-11-21T19:30:10.173-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (email, nome, senha, id) 
+    values
+        (?, ?, ?, ?)
+2025-11-21T19:30:10.174-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.176-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2025-11-21T19:30:10.179-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:30:10.185-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:30:10.189-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_conta
+2025-11-21T19:30:10.192-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta
+        (idbanco, descricao, limite, saldo, tipo_conta, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:30:10.195-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:30:10.200-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:30:10.207-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for seq_lancamento
+2025-11-21T19:30:10.209-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:30:10.219-03:00 DEBUG 21044 --- [Coinkeeper] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcentrocusto, idconta, data_baixa, data_lancamento, data_vencimento, descricao, parcela, idpessoa, situacao, tipo_lancamento, valor_baixado, valor_documento, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-21T19:30:10.359-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-11-21T19:30:11.142-03:00  WARN 21044 --- [Coinkeeper] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T19:30:13.931-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-21T19:30:14.115-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-21T19:30:14.216-03:00  INFO 21044 --- [Coinkeeper] [restartedMain] c.c.Coinkeeper.CoinkeeperApplication     : Started CoinkeeperApplication in 14.52 seconds (process running for 15.34)
+2025-11-21T19:30:19.179-03:00  INFO 21044 --- [Coinkeeper] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21T19:30:19.180-03:00  INFO 21044 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-21T19:30:19.181-03:00  INFO 21044 --- [Coinkeeper] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-21T19:30:19.882-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        u1_0.senha 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-11-21T19:30:19.897-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2025-11-21T19:30:20.413-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        l1_0.id,
+        l1_0.idcentrocusto,
+        l1_0.idconta,
+        l1_0.data_baixa,
+        l1_0.data_lancamento,
+        l1_0.data_vencimento,
+        l1_0.descricao,
+        l1_0.parcela,
+        l1_0.idpessoa,
+        l1_0.situacao,
+        l1_0.tipo_lancamento,
+        l1_0.valor_baixado,
+        l1_0.valor_documento 
+    from
+        lancamento l1_0
+2025-11-21T19:30:20.423-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:30:20.426-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:30:20.433-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:30:20.436-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?
+2025-11-21T19:30:20.437-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        b1_0.id,
+        b1_0.razao_social,
+        c1_0.descricao,
+        c1_0.limite,
+        c1_0.saldo,
+        c1_0.tipo_conta,
+        u1_0.id,
+        u1_0.email,
+        u1_0.nome,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        u1_0.senha 
+    from
+        conta c1_0 
+    left join
+        banco b1_0 
+            on b1_0.id=c1_0.idbanco 
+    left join
+        usuario u1_0 
+            on u1_0.id=c1_0.idusuario 
+    left join
+        perfis pt1_0 
+            on u1_0.id=pt1_0.person_id 
+    where
+        c1_0.id=?
+2025-11-21T19:30:20.439-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.razao_social 
+    from
+        pessoa p1_0 
+    where
+        p1_0.id=?
+2025-11-21T19:30:20.441-03:00 DEBUG 21044 --- [Coinkeeper] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        cc1_0.id,
+        cc1_0.descricao 
+    from
+        centrocusto cc1_0 
+    where
+        cc1_0.id=?

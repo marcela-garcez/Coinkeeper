@@ -1,0 +1,58 @@
+<section class="home-container">
+  <h1 class="titulo">Visão Geral</h1>
+
+  <!-- INDICADORES -->
+  <div class="indicadores-container">
+    <div class="indicador-card roxo">
+      <h4>Lançamentos</h4>
+      <p class="valor">{{ totalLancamentos }}</p>
+      <p class="subinfo">Último lançamento: <span>{{ ultimoLancamento?.descricao }}</span></p>
+      <p class="comparativo">
+        vs mês anterior:
+        <span [class.positivo]="variacaoPercentual >= 0" [class.negativo]="variacaoPercentual < 0">
+          {{ variacaoPercentual | number : '1.1-1' }}%
+        </span>
+      </p>
+    </div>
+
+    <div class="indicador-card azul">
+      <h4>Extrato Geral</h4>
+      <p class="valor">R$ {{ saldoAtual | number:'1.2-2' }}</p>
+      <p class="subinfo">
+        Entradas mês: <span>R$ {{ entradasMesAtual | number:'1.2-2' }}</span>
+      </p>
+      <p class="subinfo">
+        Saídas mês: <span>R$ {{ saidasMesAtual | number:'1.2-2' }}</span>
+      </p>
+    </div>
+
+    <div class="indicador-card rosa">
+      <h4>Movimentos do mês</h4>
+      <p class="valor">R$ {{ totalMesAtual | number:'1.2-2' }}</p>
+      <p class="subinfo">Mês atual</p>
+      <p class="comparativo">
+        vs mês anterior:
+        <span [class.positivo]="variacaoPercentual >= 0" [class.negativo]="variacaoPercentual < 0">
+          {{ variacaoPercentual | number : '1.1-1' }}%
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- GRÁFICOS -->
+  <div class="cards-container">
+    <div class="card">
+      <h3>Lançamentos por Mês</h3>
+      <div class="chart-wrapper">
+        <canvas #gastosCentroChart></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Extrato (Entradas x Saídas)</h3>
+      <div class="chart-wrapper">
+        <canvas #extratoChart></canvas>
+      </div>
+    </div>
+  </div>
+</section>
