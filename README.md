@@ -1,59 +1,27 @@
-# App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+# Coinkeeper
 
-## Development server
+Esse projeto é um sistema simples de como funciona um gerenciador financeiro.
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+## Objetivos
+O objetivo principal do projeto é desenvolver a capicidade de criação de um sistema utilizando os conhecimentos desenvolvidos em sala de aula
+## Contextualização
+O controle financeiro pessoal é um desafio para grande parte das pessoas, a ausência de registros claros dificulta a visualização da real situação financeira, favorecendo o descontrole necessário
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+O Coinkeeper surge como uma solução prática para esse problema, permitindo o registro de entradas e saídas, categorização de despesas, acompanhamento de contas e geração de relatórios. Dessa forma, o sistema auxilia os usuários na organização de suas finanças pessoais, oferecendo uma visão clara e objetiva para apoiar melhores decisões financeiras.
+## Tecnologias Utilizadas
+Linguagens: Java
 
-## Code scaffolding
+Frameworks: SpringBoot
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Banco de Dados: PostgreSQL
 
-```bash
-ng generate component component-name
-```
+## Grupo desenvolvedor
+Marcela da Silva Garcez 
+[![GitHubs](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Marcela-Garcez)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcela-da-silva-garcez-7499b9266/)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Richard Bicker de Oliveira 
+[![GitHubs](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/RichardOliveira52)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/richard-oliveira-8a062222a/)
