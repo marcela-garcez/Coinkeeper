@@ -5,3 +5,4 @@ import { appConfig } from './app/app.config';
 export default function bootstrap() {
   return bootstrapApplication(AppComponent, appConfig);
 }
+
