@@ -1,0 +1,197 @@
+<section class="container py-4">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h3 mb-0">Contas</h1>
+
+    <button class="btn btn-outline-secondary btn-sm"
+            (click)="carregarTudo()" [disabled]="carregando()">
+      <span *ngIf="carregando()" class="spinner-border spinner-border-sm me-2"></span>
+      Recarregar
+    </button>
+  </div>
+
+  <!-- Form criar -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="criar()" class="row g-2">
+
+        <div class="col-12 col-md-3">
+          <input class="form-control"
+                 placeholder="Descrição"
+                 aria-label="Descrição"
+                 formControlName="descricao">
+        </div>
+
+        <div class="col-6 col-md-2">
+          <input type="number" step="0.01"
+                 class="form-control"
+                 placeholder="Saldo"
+                 aria-label="Saldo"
+                 formControlName="saldo">
+        </div>
+
+        <div class="col-6 col-md-2">
+          <input type="number" step="0.01"
+                 class="form-control"
+                 placeholder="Limite"
+                 aria-label="Limite"
+                 formControlName="limite">
+        </div>
+
+        <div class="col-6 col-md-2">
+          <select class="form-select"
+                  aria-label="Tipo da Conta"
+                  formControlName="tipoConta">
+            <option *ngFor="let t of tiposConta" [value]="t.value">{{ t.label }}</option>
+          </select>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <select class="form-select"
+                  aria-label="Banco"
+                  formControlName="bancoId">
+            <option [ngValue]="null">– Banco –</option>
+            <option *ngFor="let b of bancos()" [ngValue]="b.id">
+              {{ b.razaoSocial || b.nome || ('#' + b.id) }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <select class="form-select"
+                  aria-label="Usuário"
+                  formControlName="usuarioId">
+            <option [ngValue]="null">– Usuário –</option>
+            <option *ngFor="let u of usuarios()" [ngValue]="u.id">
+              {{ u.nome || ('#' + u.id) }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-2 d-grid">
+          <button class="btn btn-primary"
+                  type="submit"
+                  [disabled]="form.invalid || carregando()">Criar</button>
+        </div>
+
+        <div class="col-12" *ngIf="erro()">
+          <div class="alert alert-danger mt-2 mb-0">{{ erro() }}</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Filtro -->
+  <div class="card shadow-sm">
+    <div class="card-body p-0">
+      <div class="p-3">
+        <input class="form-control"
+               placeholder="Filtrar por descrição / saldo / limite / tipo..."
+               aria-label="Filtro"
+               (input)="filtro.set(($any($event.target).value ?? '').toString())">
+      </div>
+
+      <!-- Tabela -->
+      <div class="table-responsive">
+        <table class="table align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th class="w-10">ID</th>
+              <th class="w-25">Descrição</th>
+              <th class="w-10">Saldo</th>
+              <th class="w-10">Limite</th>
+              <th class="w-20">Tipo</th>
+              <th class="w-25">Banco</th>
+              <th class="w-25">Usuário</th>
+              <th class="text-end w-25">Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let c of contasFiltradas()">
+              <td class="text-muted">#{{ c.id }}</td>
+
+              <td>
+                <input class="form-control form-control-sm"
+                       aria-label="Descrição da conta"
+                       [value]="c.descricao" #d>
+              </td>
+
+              <td>
+                <input type="number" step="0.01"
+                       class="form-control form-control-sm"
+                       aria-label="Saldo da conta"
+                       [value]="c.saldo" #s>
+              </td>
+
+              <td>
+                <input type="number" step="0.01"
+                       class="form-control form-control-sm"
+                       aria-label="Limite da conta"
+                       [value]="c.limite" #l>
+              </td>
+
+              <td>
+                <select class="form-select form-select-sm"
+                        aria-label="Tipo da conta"
+                        [ngModel]="c.tipoConta"
+                        [ngModelOptions]="{standalone:true}"
+                        #tpc="ngModel">
+                  <option *ngFor="let t of tiposConta" [ngValue]="t.value">{{ t.label }}</option>
+                </select>
+              </td>
+
+              <td>
+                <select class="form-select form-select-sm"
+                        aria-label="Banco"
+                        [ngModel]="c.banco?.id ?? null"
+                        #banco="ngModel">
+                  <option [ngValue]="null">–</option>
+                  <option *ngFor="let b of bancos()" [ngValue]="b.id">
+                    {{ b.razaoSocial || b.nome || ('#' + b.id) }}
+                  </option>
+                </select>
+              </td>
+
+              <td>
+                <select class="form-select form-select-sm"
+                        aria-label="Usuário"
+                        [ngModel]="c.usuario?.id ?? null"
+                        #usr="ngModel">
+                  <option [ngValue]="null">–</option>
+                  <option *ngFor="let u of usuarios()" [ngValue]="u.id">
+                    {{ u.nome || ('#' + u.id) }}
+                  </option>
+                </select>
+              </td>
+
+              <td class="text-end">
+                <button class="btn btn-sm btn-success me-2"
+                        aria-label="Salvar conta"
+                        (click)="atualizar(c.id, {
+                          descricao: d.value,
+                          saldo: toNumber(s.value),
+                          limite: toNumber(l.value),
+                          tipoConta: tpc.value,             
+                          bancoId: banco.value ?? null,
+                          usuarioId: usr.value ?? null,
+                        })"
+                        [disabled]="carregando()">Salvar</button>
+
+                <button class="btn btn-sm btn-outline-danger"
+                        aria-label="Excluir conta"
+                        (click)="remover(c.id)"
+                        [disabled]="carregando()">Excluir</button>
+              </td>
+            </tr>
+
+            <tr *ngIf="!contas().length">
+              <td colspan="9" class="text-center text-muted py-4">
+                Nenhuma conta cadastrada.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

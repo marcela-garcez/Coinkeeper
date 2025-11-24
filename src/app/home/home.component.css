@@ -1,0 +1,188 @@
+.home-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0b0b15 0%, #151530 40%, #1a1a40 100%);
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+
+  /* ROLAR */
+  display: block;
+  height: 100vh;
+  overflow-y: auto;
+}
+.home-container .titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #c6a8ff;
+  text-shadow: 0 0 8px rgba(180, 130, 255, 0.6);
+}
+
+.home-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.home-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.home-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a366ff, #4ca9ff);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(150, 80, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.home-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c89aff, #7dd3ff);
+  box-shadow: 0 0 15px rgba(180, 130, 255, 0.9);
+}
+
+  .titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #c6a8ff;
+    text-shadow: 0 0 8px rgba(180, 130, 255, 0.6);
+  }
+
+  .cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+}
+
+ .card {
+  padding: 1.8rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(140, 82, 255, 0.25);
+  border: 1px solid rgba(180,130,255,0.1);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(180, 130, 255, 0.35);
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: #c8b8ff;
+      margin-bottom: 1rem;
+    }
+
+    canvas {
+        display: block;
+        max-height: 320px;
+      width: 100% !important;
+      height: 300px !important;
+    }
+  
+  @media (max-width: 900px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+    }
+  }
+
+/* ===== INDICADORES ===== */
+.indicadores-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1300px;
+  margin-bottom: 2.5rem;
+}
+
+
+.indicador-card {
+  flex: 1;
+  min-width: 280px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(200,150,255,0.15);
+  box-shadow: 0 0 15px rgba(150,100,255,0.15);
+  transition: all 0.3s ease;
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+}
+
+.indicador-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(180,130,255,0.3);
+}
+
+.indicador-card h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #c6a8ff;
+  margin-bottom: 0.8rem;
+}
+
+.indicador-card .valor {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.indicador-card .subinfo,
+.indicador-card .comparativo,
+.indicador-card .meta-texto {
+  font-size: 0.9rem;
+  color: #bdbadb;
+  margin: 0.2rem 0;
+}
+
+.indicador-card .subinfo span,
+.indicador-card .comparativo span {
+  color: #c6a8ff;
+  font-weight: 500;
+}
+
+.indicador-card .comparativo .positivo {
+  color: #64ff91;
+}
+
+.meta-barra {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.6rem 0;
+}
+
+.progresso {
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+/* Cores por tipo */
+.indicador-card.roxo .progresso { background: linear-gradient(90deg, #a366ff, #cfa3ff); }
+.indicador-card.azul .progresso { background: linear-gradient(90deg, #4ca9ff, #82e2ff); }
+.indicador-card.rosa .progresso { background: linear-gradient(90deg, #ff66c4, #ffb8e4); }
+
+@media (max-width: 900px) {
+  .indicadores-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .indicador-card {
+    width: 90%;
+  }
+}

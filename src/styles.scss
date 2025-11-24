@@ -1,0 +1,126 @@
+/* ===== FUNDO GLOBAL (igual à tela Home) ===== */
+.glass-background {
+    background: linear-gradient(135deg, #0b0b15 0%, #151530 40%, #1a1a40 100%);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 0;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+}
+.form-select option {
+    background-color: #1a1a40 !important;
+    color: #fff !important;
+}
+
+/* Mantém o fundo roxo transparente do select */
+.form-select {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+/* ===== BODY ===== */
+body {
+    background: #0b0b15; 
+    color: #f2f2f2; 
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== INTERFACE ===== */
+.card,
+.card-body,
+.form-control,
+.form-select,
+.input-group-text,
+.table-responsive {
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    border: 1px solid rgba(200,150,255,0.15);
+-webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);    box-shadow: 0 0 20px rgba(140, 82, 255, 0.25);
+    border-radius: 16px;
+    color: #fff !important; 
+}
+
+/* ===== FORMULÁRIOS ===== */
+.form-control::placeholder,
+.form-select,
+.form-control {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(144, 202, 249, 0.6) !important; 
+    box-shadow: 0 0 0 0.25rem rgba(144, 202, 249, 0.25) !important;
+    color: #fff !important;
+}
+
+/* ===== TABELAS ===== */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #fff;
+}
+
+.table-light {
+    --bs-table-bg: rgba(255, 255, 255, 0.1) !important; 
+    --bs-table-color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+}
+
+.table .form-control-sm,
+.table .form-select-sm {
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+/* ===== TEXTOS ===== */
+.h3, .h1, .text-muted {
+    color: #fff !important;
+}
+.text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ===== BOTÕES ===== */
+.btn-outline-secondary {
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+.btn-outline-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:active, 
+.btn-primary:focus {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background-color: #38a169 !important; 
+    border-color: #38a169 !important;
+}
+
+.btn-outline-danger {
+    color: #ff4d4f !important;
+    border-color: #ff4d4f !important;
+}
+.btn-outline-danger:hover {
+    background-color: #ff4d4f !important;
+    color: #fff !important;
+}

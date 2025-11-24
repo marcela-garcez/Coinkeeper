@@ -1,0 +1,125 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+background: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+.no-margin {
+  margin-left: 0 !important;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-right: 1px solid rgba(180,130,255,0.15);
+  box-shadow: 0 0 20px rgba(140, 82, 255, 0.15);
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+ -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c6a8ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(180, 130, 255, 0.6);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #c8b8ff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #bdb6e2;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: linear-gradient(90deg, #6c63ff, #b490ff);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(180,130,255,0.35);
+}
+
+.sidebar-footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  color: #c8b8ff;
+  border: 1px solid rgba(180,130,255,0.3);
+  padding: 8px 0;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(180,130,255,0.15);
+  color: #fff;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 2rem;
+  color: #f2f2f2;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 80px;
+}
+
+/* Animações ao colapsar */
+.sidebar.collapsed .nav-link span,
+.sidebar.collapsed .brand {
+  display: none;
+}

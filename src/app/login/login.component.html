@@ -1,0 +1,72 @@
+<div class="login-container">
+  <div class="login-card">
+
+    <!-- ÍCONE DO LOGIN -->
+    <div class="avatar-icon">👤</div>
+
+    <h1 class="h3">Entrar</h1>
+
+    <!-- FORMULÁRIO -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <!-- Usuário -->
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          formControlName="username"
+          placeholder="Email ou usuário"
+        />
+      </div>
+
+      @if (form.controls.username.touched && form.controls.username.hasError('required')) {
+        <div class="err">Informe o usuário</div>
+      }
+
+      <!-- Senha -->
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Senha"
+        />
+      </div>
+
+      @if (form.controls.password.touched && form.controls.password.hasError('required')) {
+        <div class="err">Informe a senha</div>
+      }
+
+      <!-- Botão Entrar -->
+      <button
+        class="btn-login"
+        type="submit"
+        [disabled]="loading || form.invalid"
+      >
+        {{ loading ? 'Entrando...' : 'Entrar' }}
+      </button>
+    </form>
+
+    <!-- Mensagem de erro geral -->
+    @if (error) {
+      <p class="error">{{ error }}</p>
+    }
+
+    <!-- Status logado -->
+    @if (isLogged) {
+      <div class="status">
+        <small>Você já está logado.</small>
+        <button class="btn-login" type="button" (click)="logout()">Sair</button>
+      </div>
+    }
+
+    <!-- Links adicionais -->
+    <div class="login-links">
+      <p>
+        Não tem conta?
+        <a routerLink="/cadastro" class="link-footer">Cadastre-se</a>
+      </p>
+    </div>
+
+  </div>
+</div>

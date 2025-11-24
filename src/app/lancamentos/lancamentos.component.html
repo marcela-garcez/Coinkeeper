@@ -1,0 +1,265 @@
+<div class="glass-background">
+  <section class="container py-5">
+
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h1 class="h3 mb-0">Lançamentos</h1>
+      <button class="btn btn-outline-secondary btn-sm"
+        (click)="carregarTudo()" [disabled]="carregando()">
+        <span *ngIf="carregando()" class="spinner-border spinner-border-sm me-2"></span>
+        Recarregar
+      </button>
+    </div>
+
+    <!-- Form criar -->
+    <div class="card shadow-sm mb-4 glass-card">
+      <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="criar()" class="row g-2">
+     <div class="col-12 col-xl-3">
+            <label for="descricao" class="visually-hidden">Descrição</label>
+            <input id="descricao" class="form-control" placeholder="Descrição" formControlName="descricao">
+          </div>
+
+          <div class="col-6 col-xl-1">
+            <label for="parcela" class="visually-hidden">Parcela</label>
+            <input id="parcela" class="form-control" placeholder="1/1" formControlName="parcela">
+          </div>
+
+          <div class="col-6 col-xl-2">
+            <label for="dataLancamentoISO" class="visually-hidden">Data de Lançamento</label>
+            <input id="dataLancamentoISO" type="date" class="form-control" formControlName="dataLancamentoISO">
+          </div>
+
+          <div class="col-6 col-xl-2">
+            <label for="dataVencimentoISO" class="visually-hidden">Data de Vencimento</label>
+            <input id="dataVencimentoISO" type="date" class="form-control" formControlName="dataVencimentoISO">
+          </div>
+
+          <div class="col-6 col-xl-2">
+            <label for="dataBaixaISO" class="visually-hidden">Data de Baixa</label>
+            <input id="dataBaixaISO" type="date" class="form-control" formControlName="dataBaixaISO">
+          </div>
+
+          <div class="col-6 col-xl-1">
+            <label for="valorDocumento" class="visually-hidden">Valor Documento</label>
+            <input id="valorDocumento" type="number" step="0.01" class="form-control" placeholder="Doc." formControlName="valorDocumento">
+          </div>
+
+          <div class="col-6 col-xl-1">
+            <label for="valorBaixado" class="visually-hidden">Valor Baixado</label>
+            <input id="valorBaixado" type="number" step="0.01" class="form-control" placeholder="Baix." formControlName="valorBaixado">
+          </div>
+
+          <div class="col-6 col-xl-2">
+            <label for="tipo" class="visually-hidden">Tipo</label>
+            <select id="tipo" class="form-select" formControlName="tipo">
+              <option [ngValue]="null">– Tipo –</option>
+              <option *ngFor="let t of tipos" [value]="t">{{ t }}</option>
+            </select>
+          </div>
+
+          <div class="col-6 col-xl-2">
+            <label for="situacao" class="visually-hidden">Situação</label>
+            <select id="situacao" class="form-select" formControlName="situacao">
+              <option [ngValue]="null">– Situação –</option>
+              <option *ngFor="let s of situacoes" [value]="s">{{ s }}</option>
+            </select>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <label for="contaId" class="visually-hidden">Conta</label>
+            <select id="contaId" class="form-select" formControlName="contaId">
+              <option [ngValue]="null">– Conta –</option>
+              <option *ngFor="let c of contas()" [ngValue]="c.id">
+                {{ c.descricao || ('#' + c.id) }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <label for="pessoaId" class="visually-hidden">Pessoa</label>
+            <select id="pessoaId" class="form-select" formControlName="pessoaId">
+              <option [ngValue]="null">– Pessoa –</option>
+              <option *ngFor="let t of pessoas()" [ngValue]="t.id">
+                {{ t.razaoSocial || ('#' + t.id) }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <label for="centroCustoId" class="visually-hidden">Centro de Custo</label>
+            <select id="centroCustoId" class="form-select" formControlName="centroCustoId">
+              <option [ngValue]="null">– Centro de Custo –</option>
+              <option *ngFor="let cc of centros()" [ngValue]="cc.id">
+                {{ cc.descricao || ('#' + cc.id) }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-12 col-xl-2 d-grid">
+            <button class="btn btn-primary" type="submit" [disabled]="form.invalid || carregando()">Criar</button>
+          </div>
+
+          <div class="col-12" *ngIf="erro()">
+            <div class="alert alert-danger mt-2 mb-0">{{ erro() }}</div>
+          </div><!-- (Form original permanece igual, pois não há inline styles) -->
+
+        </form>
+      </div>
+    </div>
+
+    <!-- FILTRO + TABELA -->
+    <div class="card shadow-sm glass-card">
+      <div class="card-body p-0">
+
+        <div class="p-3">
+          <label for="filtro" class="visually-hidden">Filtro</label>
+          <input id="filtro" class="form-control"
+            placeholder="Filtrar por descrição / tipo / valor / conta / centro / pessoa..."
+            (input)="filtro.set(($any($event.target).value ?? '').toString())">
+        </div>
+
+        <div class="table-responsive">
+          <table class="table align-middle mb-0 table-glass">
+            <thead class="table-light glass-header">
+              <tr>
+                <th>ID</th>
+                <th class="w-25">Descrição</th>
+                <th>Parcela</th>
+                <th>Lançamento</th>
+                <th>Vencimento</th>
+                <th>Baixa</th>
+                <th>Doc.</th>
+                <th>Baix.</th>
+                <th>Tipo</th>
+                <th class="w-25">Conta</th>
+                <th class="w-25">Centro Custo</th>
+                <th class="w-25">Pessoa</th>
+                <th>Situação</th>
+                <th class="text-end w-25">Ações</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let l of listaFiltrada()">
+
+                <td class="text-muted">#{{ l.id }}</td>
+
+                <td><input class="form-control form-control-sm" [value]="l.descricao" #d></td>
+                <td><input class="form-control form-control-sm" [value]="l.parcela" #par></td>
+
+                <td><input type="date" class="form-control form-control-sm" [value]="l.dataLancamentoISO" #dl></td>
+                <td><input type="date" class="form-control form-control-sm" [value]="l.dataVencimentoISO" #dv></td>
+                <td><input type="date" class="form-control form-control-sm" [value]="l.dataBaixaISO" #db></td>
+
+                <td><input type="number" step="0.01" class="form-control form-control-sm" [value]="l.valorDocumento" #vd></td>
+                <td><input type="number" step="0.01" class="form-control form-control-sm" [value]="l.valorBaixado" #vb></td>
+
+                <!-- SELECT Tipo -->
+                <td>
+                  <label class="visually-hidden" for="tipoRow{{l.id}}">Tipo</label>
+                  <select id="tipoRow{{l.id}}" aria-label="Tipo"
+                    class="form-select form-select-sm"
+                    [ngModel]="l.tipoLancamento"
+                    [ngModelOptions]="{standalone:true}"
+                    #tp="ngModel">
+                    <option *ngFor="let t of tipos" [ngValue]="t">{{ t }}</option>
+                  </select>
+                </td>
+
+                <!-- SELECT Conta -->
+                <td>
+                  <label class="visually-hidden" for="contaRow{{l.id}}">Conta</label>
+                  <select id="contaRow{{l.id}}" aria-label="Conta"
+                    class="form-select form-select-sm"
+                    [ngModel]="l.conta?.id ?? null"
+                    [ngModelOptions]="{standalone:true}"
+                    #conta="ngModel">
+                    <option [ngValue]="null">–</option>
+                    <option *ngFor="let c of contas()" [ngValue]="c.id">{{ c.descricao || ('#' + c.id) }}</option>
+                  </select>
+                </td>
+
+                <!-- SELECT Centro Custo -->
+                <td>
+                  <label class="visually-hidden" for="ccRow{{l.id}}">Centro de Custo</label>
+                  <select id="ccRow{{l.id}}" aria-label="Centro de Custo"
+                    class="form-select form-select-sm"
+                    [ngModel]="l.centroCusto?.id ?? null"
+                    [ngModelOptions]="{standalone:true}"
+                    #cc="ngModel">
+                    <option [ngValue]="null">–</option>
+                    <option *ngFor="let c of centros()" [ngValue]="c.id">{{ c.descricao || ('#' + c.id) }}</option>
+                  </select>
+                </td>
+
+                <!-- SELECT Pessoa -->
+                <td>
+                  <label class="visually-hidden" for="pessoaRow{{l.id}}">Pessoa</label>
+                  <select id="pessoaRow{{l.id}}" aria-label="Pessoa"
+                    class="form-select form-select-sm"
+                    [ngModel]="l.pessoa?.id ?? null"
+                    [ngModelOptions]="{standalone:true}"
+                    #ter="ngModel">
+                    <option [ngValue]="null">–</option>
+                    <option *ngFor="let p of pessoas()" [ngValue]="p.id">{{ p.razaoSocial || ('#' + p.id) }}</option>
+                  </select>
+                </td>
+
+                <!-- SELECT Situação -->
+                <td>
+                  <label class="visually-hidden" for="sitRow{{l.id}}">Situação</label>
+                  <select id="sitRow{{l.id}}" aria-label="Situação"
+                    class="form-select form-select-sm"
+                    [ngModel]="l.situacao"
+                    [ngModelOptions]="{standalone:true}"
+                    #sit="ngModel">
+                    <option *ngFor="let s of situacoes" [ngValue]="s">{{ s }}</option>
+                  </select>
+                </td>
+
+                <td class="text-end">
+
+                  <!-- Botão SALVAR -->
+                  <button class="btn btn-sm btn-success me-2"
+                    (click)="atualizar(
+                      l.id,
+                      {
+                        descricao: d.value,
+                        parcela: par.value,
+                        dataLancamentoISO: dl.value || null,
+                        dataVencimentoISO: dv.value || null,
+                        dataBaixaISO: db.value || null,
+                        valorDocumento: toNumber(vd.value),
+                        valorBaixado: toNumber(vb.value),
+                        tipoLancamento: tp.value,
+                        situacao: sit.value,
+                        contaId: conta.value != null ? toNumber(conta.value) : null,
+                        centroCustoId: cc.value != null ? toNumber(cc.value) : null,
+                        pessoaId: ter.value != null ? toNumber(ter.value) : null
+                      }
+                    )"
+                    [disabled]="carregando()">Salvar</button>
+
+                  <!-- Botão EXCLUIR -->
+                  <button class="btn btn-sm btn-outline-danger"
+                    (click)="remover(l.id)"
+                    [disabled]="carregando()">Excluir</button>
+
+                </td>
+              </tr>
+
+              <tr *ngIf="!listaFiltrada().length">
+                <td colspan="14" class="text-center text-muted py-4">
+                  Nenhum lançamento encontrado.
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+</div>
